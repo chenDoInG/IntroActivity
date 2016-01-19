@@ -5,12 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 
-/** 
- * 类说明 
- * @author  chenDoInG 
- * @version V1.0  
- * @创建时间：2013-8-5
- */
 public class BaseActivity extends Activity {
 
     @Override

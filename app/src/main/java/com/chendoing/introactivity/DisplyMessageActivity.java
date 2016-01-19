@@ -5,12 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-/** 
- * 类说明 
- * @author  chenDoInG 
- * @version V1.0  
- * @创建时间：2013-8-4
- */
 public class DisplyMessageActivity extends BaseActivity{
 
     @Override

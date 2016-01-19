@@ -20,23 +20,14 @@ public class IntroActivity extends BaseActivity {
         setContentView(R.layout.activity_intro);
     }
 
-
-//    @Override
-//    public boolean onPrepareOptionsMenu(Menu menu) {
-//        menu.add(R.menu.intro);
-//        return true;
-//    }
-
-    
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu1:
-                Toast.makeText(this, "exit", 10).show();
+                Toast.makeText(this, "exit", Toast.LENGTH_LONG).show();
                 return true;
             case R.id.help:
-                Toast.makeText(this, "help", 10).show();
+                Toast.makeText(this, "help", Toast.LENGTH_LONG).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -46,7 +37,6 @@ public class IntroActivity extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add(R.id.help);
         return super.onCreateOptionsMenu(menu);
     }
 

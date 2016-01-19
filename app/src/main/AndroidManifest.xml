@@ -28,7 +28,7 @@
             android:parentActivityName="com.chendoing.introactivity.IntroActivity">
             <meta-data 
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.chendoing.intoractivity.IntroActivity" />
+                android:value="com.chendoing.introactivity.IntroActivity" />
          </activity>
     </application>
 </manifest>
