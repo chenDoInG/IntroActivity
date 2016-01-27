@@ -2,6 +2,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation= "horizontal" >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show"
+        android:id="@+id/showText"
+        android:onClick="showText"/>
+
     <EditText
         android:id="@+id/edit_message"
         android:layout_weight="1"

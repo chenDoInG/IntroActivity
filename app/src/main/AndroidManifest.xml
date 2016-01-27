@@ -8,13 +8,15 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
+
     <application
+        android:name=".AppApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.chendoing.introactivity.IntroActivity"
+            android:name="com.chendoing.introactivity.ui.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,12 +25,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.chendoing.introactivity.DisplyMessageActivity"
+            android:name="com.chendoing.introactivity.ui.DisplayMessageActivity"
             android:label="@string/title_activity_disply_message"
-            android:parentActivityName="com.chendoing.introactivity.IntroActivity">
-            <meta-data 
+            android:parentActivityName="com.chendoing.introactivity.ui.MainActivity">
+            <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.chendoing.introactivity.IntroActivity" />
+                android:value="com.chendoing.introactivity.ui.MainActivity" />
          </activity>
     </application>
 </manifest>
