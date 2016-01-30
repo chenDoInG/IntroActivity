@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:text="show"
         android:id="@+id/showText"
-        android:onClick="showText"/>
+        android:onClick="show"/>
 
     <EditText
         android:id="@+id/edit_message"

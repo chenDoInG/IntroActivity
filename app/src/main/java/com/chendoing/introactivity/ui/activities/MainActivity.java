@@ -1,4 +1,4 @@
-package com.chendoing.introactivity.ui;
+package com.chendoing.introactivity.ui.activities;
 
 import android.os.Bundle;
 import android.content.Intent;
@@ -6,11 +6,12 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 
-import com.chendoing.introactivity.AppComponent;
+import com.chendoing.introactivity.AppApplication;
 import com.chendoing.introactivity.R;
-import com.chendoing.introactivity.ui.component.DaggerMainActivityComponent;
-import com.chendoing.introactivity.ui.module.MainActivityModule;
-import com.chendoing.introactivity.ui.presenter.MainActivityPresenter;
+import com.chendoing.introactivity.injectors.component.DaggerMainActivityComponent;
+import com.chendoing.introactivity.injectors.module.MainActivityModule;
+import com.chendoing.introactivity.injectors.module.TranformModule;
+import com.chendoing.introactivity.presenters.MainActivityPresenter;
 
 import javax.inject.Inject;
 
@@ -19,7 +20,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
-    public final static String EXTRA_MESSAGE = "com.chendoing.intoractivity.MESSAGE";
+//    public final static String EXTRA_MESSAGE = "com.chendoing.intoractivity.MESSAGE";
 
     @Bind(R.id.edit_message)
     EditText editText;
@@ -30,6 +31,16 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initUi();
+        initializeDependencyInjector();
+        initializePresenter();
+    }
+
+    private void initializePresenter() {
+        presenter.onCreate();
+    }
+
+    private void initUi() {
         setContentView(R.layout.activity_intro);
         ButterKnife.bind(this);
     }
@@ -39,26 +50,28 @@ public class MainActivity extends BaseActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    protected void setupActivityComponent(AppComponent appComponent) {
+    protected void initializeDependencyInjector() {
         DaggerMainActivityComponent.builder()
-                .appComponent(appComponent)
+                .appComponent(((AppApplication) getApplication()).getAppComponent())
                 .mainActivityModule(new MainActivityModule(this))
+                .tranformModule(new TranformModule())
                 .build().inject(this);
     }
 
-    public void showText(View view){
+    public void show(View view){
         presenter.showUserName();
     }
-    public void show(String name){
-        editText.setText(name);
+
+    public void show(String using) {
+        editText.setText(using);
     }
 
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        String message = editText.getText().toString();
+//        String message = editText.getText().toString();
 
-        intent.putExtra(EXTRA_MESSAGE, message);
+//        intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+
 }

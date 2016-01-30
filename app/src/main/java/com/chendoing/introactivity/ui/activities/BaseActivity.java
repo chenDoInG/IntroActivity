@@ -1,4 +1,4 @@
-package com.chendoing.introactivity.ui;
+package com.chendoing.introactivity.ui.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,15 +8,14 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.chendoing.introactivity.AppApplication;
-import com.chendoing.introactivity.AppComponent;
+import com.chendoing.introactivity.injectors.component.AppComponent;
 import com.chendoing.introactivity.R;
 
-public abstract class BaseActivity extends Activity {
+public abstract class BaseActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupActivityComponent(AppApplication.get(this).getAppComponent());
     }
 
     @Override
@@ -40,5 +39,4 @@ public abstract class BaseActivity extends Activity {
         }
 
     }
-    protected abstract void setupActivityComponent(AppComponent appComponent);
 }

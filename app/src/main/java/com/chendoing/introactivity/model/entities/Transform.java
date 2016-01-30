@@ -1,9 +1,9 @@
-package com.chendoing.introactivity.model;
+package com.chendoing.introactivity.model.entities;
 
 import java.util.List;
 
 @SuppressWarnings("unused")
-public class User {
+public class Transform {
 
     public List<Data> getDatas() {
         return datas;

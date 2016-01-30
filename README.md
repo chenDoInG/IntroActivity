@@ -1,3 +1,3 @@
-#introActivity
+#activity
 My Android Funny
 

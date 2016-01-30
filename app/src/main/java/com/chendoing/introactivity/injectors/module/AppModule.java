@@ -1,4 +1,4 @@
-package com.chendoing.introactivity;
+package com.chendoing.introactivity.injectors.module;
 
 import android.app.Application;
 
@@ -10,7 +10,7 @@ import dagger.Provides;
 @Module
 public class AppModule {
 
-    private Application application;
+    private final Application application;
 
     public AppModule(Application application) {
         this.application = application;

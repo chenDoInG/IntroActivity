@@ -1,4 +1,25 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    configuration = [
+            package             : "com.chendoing.introactivity",
+            buildToolsVersion   : "23.0.2",
+            compileVersion      : 23,
+            minSdk              : 11,
+            targetSdk           : 17,
+            version_code        : 3,
+            version_name        : "0.3",
+    ]
+
+    libraries = [
+            supportVersion      : "23.1.1",
+            dagger              : "2.0.2",
+            retrofit            : "2.0.0-beta3",
+            butterknife         : "7.0.1",
+            javax_annotation    : "10.0-b28",
+            circleimageview     : "1.3.0",
+            glide               : "3.6.0"
+    ]
+}
 
 buildscript {
     repositories {

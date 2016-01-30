@@ -9,4 +9,10 @@
     <string name="title_activity_disply_message">My Message</string>
     <string name="exit">exit</string>
     <string name="help">help</string>
+    <string name="error.network.image_not_found">没找到图片</string>
+    <string name="message_loading_more">加载更多</string>
+    <string name="error.default.characters">没有该元素</string>
+    <string name="error_loading_data">无法加载数据</string>
+    <string name="try_again">再试一次</string>
+    <string name="error_network_unknowhost">网络请求错误：未知的域名</string>
 </resources>
